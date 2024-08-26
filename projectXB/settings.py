@@ -28,8 +28,14 @@ SECRET_KEY = 'django-insecure-82=z8dukj7z!_(q7&75wl+rj1y)04h3ag46t!p__uh!*vglw^i
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+CORS_ALLOW_ALL_ORIGINS = True
 
 ALLOWED_HOSTS = ['projectxb.onrender.com']
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+    "https://projectxb.onrender.com",
+]
 
 
 # Application definition
@@ -43,7 +49,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'api',
-    'drf_yasg'
+    'drf_yasg',
+    'corsheaders',
 ]
 
 REST_FRAMEWORK = {
@@ -67,6 +74,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'projectXB.urls'
