@@ -30,11 +30,12 @@ SECRET_KEY = 'django-insecure-82=z8dukj7z!_(q7&75wl+rj1y)04h3ag46t!p__uh!*vglw^i
 DEBUG = True
 CORS_ALLOW_ALL_ORIGINS = True
 
-ALLOWED_HOSTS = ['projectxb.onrender.com']
+ALLOWED_HOSTS = ['projectxb.onrender.com', 'projectxtoken.onrender.com']
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "https://projectxb.onrender.com",
+    "https://projectxtoken.onrender.com"
 ]
 
 
